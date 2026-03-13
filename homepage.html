@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Tours Wireframe Layout</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Assets/Css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="custom-navbar border-bottom shadow-sm" style="min-height: 80px;">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center h-100">
+            <a href="#" class="d-flex align-items-center text-decoration-none">
+                <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo"
+                    style="height: 50px; margin-right: 10px;">
+                <h4 class="m-0 fw-bold text-dark">Ceylon Journey</h4>
+            </a>
+            <ul class="nav">
+                <li class="nav-item me-2"><a href="#"
+                        class="nav-link btn-beautiful btn-beautiful-active px-4 py-2 rounded-pill small fw-bold">Home</a>
+                </li>
+                <li class="nav-item me-2"><a href="abouth.html"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">About</a></li>
+                <li class="nav-item me-2"><a href="#"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Tours</a></li>
+                <li class="nav-item me-2"><a href="#"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Gallery</a></li>
+                <li class="nav-item"><a href="#"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner mb-5">
+        <div id="carouselExampleAutoplaying" class="carousel slide w-100" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item ">
+                    <img src="Assets/Images/banner/ella.jpg" class="d-block w-100" alt="Sri Lankan heritage">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Images/banner/beach.jpg" class="d-block w-100" alt="Sri Lankan beach">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Images/banner/fort.jpg" class="d-block w-100" alt="Sri Lankan heritage">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Images/banner/train.jpg" class="d-block w-100" alt="adventure travel ">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Images/banner/monkey.jpg" class="d-block w-100" alt="Sri lankan animal">
+                </div>
+                <div class="carousel-item active">
+                    <img src="Assets/Images/banner/sigi.jpg" class="d-block w-100" alt="Sigiriya Rock Fortress">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Images/banner/lion.jpg" class="d-block w-100" alt="Sri lankan animal">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Images/banner/gallefort.jpg" class="d-block w-100" alt="Sri lankan animal">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Explore Section with Form -->
+    <section class="bg-explore-section py-2 pb-5 border-bottom">
+        <div class="container">
+        <div class="d-flex justify-content-end mb-4">
+            <button type="submit" form="travelPlanForm" class="btn btn-dark rounded-1 text-white small px-4 py-2">Create
+                Your Own tour</button>
+        </div>
+        <div class="row align-items-start">
+            <div class="col-lg-6 pe-lg-5">
+                <h2 class="beautiful-heading mb-4">Explore Sri Lanka with Personalized Round Tours</h2>
+                <p class="text-muted small mb-5" style="text-align: justify;font-size: medium;">
+                    Explore the beauty of Sri Lanka through personalized round tour experiences designed for every traveler. This platform allows users to plan customized travel itineraries based on their interests, budget, and preferred destinations. Travelers can explore famous locations such as Sigiriya Rock Fortress, Ella Nine Arches Bridge, and Yala National Park. The system helps users select destinations, arrange travel routes, and manage tour schedules easily. It provides a simple interface to discover cultural, historical, and natural attractions across the island. Users can also modify their tour plans to create a flexible travel experience. This project aims to make travel planning more convenient and organized. Overall, the system helps tourists explore the beauty and diversity of Sri Lanka efficiently. 🌴✈️
+                </p>
+
+                <h6 class="fw-bold mb-4">Could you tell us your travel plan details?</h6>
+                <form id="travelPlanForm" action="process.php" method="POST">
+                    <ul class="list-unstyled checklist-form">
+                        <li><span class="bullet">•</span>Destination(s) (Cities, countries, or regions)</li>
+                        <li><span class="bullet">•</span>Activities & Interests (Adventure, relaxation, history, food, nature, etc.) </li>
+                        <li><span class="bullet">•</span>Travel Style (Luxury, budget, family-friendly, solo, group, etc.) </li>
+                        <li><span class="bullet">•</span>Must-See Places (Any specific landmarks or attractions?)</li>
+                        <li><span class="bullet">•</span>Special Requests (Dietary needs, accessibility, unique experiences?)</li>
+                        <li><span class="bullet">•</span>The more details you provide, the better I can tailor the itinerary to your needs!</li>
+                    </ul>
+                    <div id="formMessage" class="mt-2"></div>
+                </form>
+            </div>
+            <div class="col-lg-6 d-flex flex-column align-items-end mt-4 mt-lg-0">
+                <img src="Assets/Images/logo/new11.avif" alt="Explore Sri Lanka Coastal beauty"
+                    class="explore-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Travel Packages Section -->
+    <section class="py-5 text-center border-bottom bg-travel-packages">
+        <div class="container">
+            <h2 class="beautiful-heading mx-auto mb-4">Travel Packages...</h2>
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-9">
+                <p class="text-muted small lh-lg">
+                    Discover the beauty of Sri Lanka with our carefully designed travel packages. Explore famous destinations, enjoy comfortable travel arrangements, and experience the island’s culture and nature. Choose a package that suits your interests and start your unforgettable journey. 🌴
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 text-start">
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/travelimage/image3.jpg" class="card-img-top" alt="Below 5 Days Tours">
+                    <div class="card-body pt-3 pb-4 px-4">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-4">Below 5 Days Tours</h6>
+                        <p class="card-text text-muted small mb-4" style="text-align: justify;">Experience the cultural and historical highlights of Sri Lanka with a short and exciting tour. Visit iconic destinations such as Sigiriya Rock Fortress, Dambulla Cave Temple, Habarana, Polonnaruwa, Kandy, and relax by the beaches of Negombo. Perfect for travelers who want to explore major attractions in a short time.🌴✈️</p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.75rem;">Read
+                            more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/travelimage/image1.jpg" class="card-img-top" alt="8-10 Days Tour">
+                    <div class="card-body pt-3 pb-4 px-4">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-4">8-10 Days Tour</h6>
+                        <p class="card-text text-muted small mb-4" style="text-align: justify;">Enjoy an unforgettable journey across Sri Lanka with this extended tour package. Explore cultural sites like Sigiriya Rock Fortress and Dambulla Cave Temple, scenic hill country in Nuwara Eliya and Ella, and wildlife at Udawalawe National Park. Relax on beautiful beaches in Tangalle, Bentota, and explore historic towns like Galle before ending your trip in Colombo and Negombo. 🌴✈️</p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.75rem;">Read
+                            more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/travelimage/image2.jpg" class="card-img-top" alt="10-14 Days Tour">
+                    <div class="card-body pt-3 pb-4 px-4">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-4">10-14 Days Tour</h6>
+                        <p class="card-text text-muted small mb-4" style="text-align: justify;">Discover the full beauty of Sri Lanka with an extended island tour. Visit cultural landmarks like Sigiriya Rock Fortress and Dambulla Cave Temple, explore the northern city of Jaffna and the beaches of Trincomalee. Enjoy the hill country in Nuwara Eliya and Ella, experience wildlife at Yala National Park, and relax on southern beaches like Mirissa, Tangalle, and Bentota before ending the tour in Colombo and Negombo.🌴✈️</p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.75rem;">Read
+                            more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Sri Lanka Overview Section -->
+    <section class="container-fluid py-5 text-center bg-blue-section">
+        <h2 class="beautiful-heading mb-4">Sri lanka overview</h2>
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8">
+                <p class="small">
+                    Sri Lanka is a paradise of natural beauty, history, and adventure. Explore ancient temples, scenic
+                    hill country, vibrant cities, and pristine coastlines all within a short distance. With its
+                    welcoming people and diverse experiences, it promises a journey like no other.
+                </p>
+            </div>
+        </div>
+
+        <div class="container row g-4 text-start mx-auto">
+            <!-- Row 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/view/new.jpg" class="card-img-top" alt="Breathtaking Beaches">
+                    <div class="card-body pt-3 pb-4 px-3">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-3" style="font-size:medium;">Breathtaking Beaches</h6>
+                        <p class="card-text text-muted mb-4" style="font-size: medium;text-align: justify;">Relax on the stunning beaches of Sri Lanka, where golden sands and clear blue waters create the perfect tropical escape. Enjoy beautiful coastal destinations like Mirissa, Bentota, and Unawatuna while experiencing the peaceful beauty of the island. </p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.7rem;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/view/hill.jpg" class="card-img-top" alt="Scenic Hill Country">
+                    <div class="card-body pt-3 pb-4 px-3">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-3" style="font-size: medium;">Scenic Hill Country</h6>
+                        <p class="card-text text-muted mb-4" style="font-size: medium;text-align: justify;">Experience the cool and picturesque hill country of Sri Lanka. Explore lush tea plantations, misty mountains, and charming towns like Nuwara Eliya and Ella for a refreshing escape into nature. </p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.7rem;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/view/Wildlife.jpg" class="card-img-top" alt="Wildlife & Nature">
+                    <div class="card-body pt-3 pb-4 px-3">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-3" style="font-size:medium">Wildlife & Nature</h6>
+                        <p class="card-text text-muted mb-4" style="font-size:medium;text-align: justify;">Discover the rich wildlife and natural beauty of Sri Lanka. Visit national parks like Yala National Park and Udawalawe National Park to see elephants, leopards, and exotic birds in their natural habitat. </p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.7rem;"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/view/Culture.jpg" class="card-img-top" alt="Rich History & Culture">
+                    <div class="card-body pt-3 pb-4 px-3">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-3" style="font-size:medium">Rich History & Culture</h6>
+                        <p class="card-text text-muted mb-4" style="font-size:medium;text-align: justify;">Explore the fascinating history and vibrant culture of Sri Lanka. Visit ancient cities like Polonnaruwa and iconic landmarks such as Sigiriya Rock Fortress to experience the island’s heritage and traditions.</p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.7rem;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/view/Activities.jpg" class="card-img-top" alt="Adventure & Outdoor Activities">
+                    <div class="card-body pt-3 pb-4 px-3">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-3" style="font-size:medium;">Adventure & Outdoor Activities
+                        </h6>
+                        <p class="card-text text-muted mb-4" style="font-size:medium;text-align: justify;">Experience the thrill of adventure with a variety of outdoor activities in Sri Lanka. From thrilling water sports and hiking adventures to wildlife safaris and cultural excursions, there’s something for every explorer.</p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.7rem;"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="Assets/Images/view/food.jpg" class="card-img-top" alt="Delicious food">
+                    <div class="card-body pt-3 pb-4 px-3">
+                        <span class="text-muted d-block mb-2" style="font-size: 0.65rem;"></span>
+                        <h6 class="card-title fw-bold mb-3" style="font-size:medium;">Delicious food</h6>
+                        <p class="card-text text-muted mb-4" style="font-size:medium;text-align: justify;">Indulge in the diverse and flavorful cuisine of Sri Lanka, where aromatic spices and fresh ingredients come together to create unforgettable dishes. From spicy curries and savory snacks to sweet treats, there’s something to satisfy every palate.</p>
+                        <a href="#" class="text-dark d-block text-decoration-none" style="font-size: 0.7rem;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footer-section border-top py-5">
+        <div class="container">
+            <div class="row align-items-md-start mb-5">
+                <div class="col-12 col-md-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                    <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo" style="height: 50px; margin-bottom: 10px;">
+                    <h4 class="fw-bold mb-5 mt-2 text-dark">Ceylon Journey</h4>
+                    <div class="d-flex text-dark mt-auto mb-2 mb-md-0">
+                        <a href="#" class="text-dark me-3"><i class="fa-brands fa-instagram"
+                                style="font-size: 0.9rem;"></i></a>
+                        <a href="#" class="text-dark me-3"><i class="fa-brands fa-facebook-f"
+                                style="font-size: 0.9rem;"></i></a>
+                        <a href="#" class="text-dark"><i class="fa-brands fa-twitter"
+                                style="font-size: 0.9rem;"></i></a>
+                    </div>
+                </div>
+
+                <div
+                    class="col-12 col-md-4 text-center text-md-center mb-4 mb-md-0 d-flex flex-column align-items-center mx-auto">
+                    <h6 class="fw-bold mb-3 small">Quick Links</h6>
+                    <ul class="list-unstyled mb-0" style="font-size: 0.75rem;">
+                        <li class="mb-2"><a href="abouth.html" class="text-decoration-none text-muted">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Create Tours</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Gallery</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <div class="mb-3" style="font-size: 0.75rem;">
+                        <span class="fw-bold text-dark me-2">Hot Line :</span>
+                        <span class="text-muted">077-1246878</span>
+                    </div>
+                    <div style="font-size: 0.75rem;">
+                        <span class="fw-bold text-dark d-block mb-1">Address:</span>
+                        <span class="text-muted d-block">123 Main Street, City</span>
+                        <span class="text-muted d-block">State Province, Country</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-2 text-center text-md-start" style="font-size: 0.7rem;">
+                <div class="col-md-6 mb-2 mb-md-0">
+                    <span class="text-muted">&copy; 2024 Ceylon Journey. All rights reserved.</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none text-muted me-4">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Assets/js/script.js"></script>
+</body>
+
+</html>
