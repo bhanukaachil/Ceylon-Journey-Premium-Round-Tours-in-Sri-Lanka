@@ -1,0 +1,119 @@
+/* =========================================================
+   contact.css — Ceylon Journey Premium Contact Page
+   ========================================================= */
+
+:root {
+    --primary-orange: #f77f00;
+    --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* 1. Hero Section */
+.bg-contact-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../Images/banner/fort.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 80px;
+    margin-top: -80px;
+    text-align: center;
+    color: white;
+}
+
+.contact-eyebrow {
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contact-main-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+/* 2. Contact Information Card */
+.contact-info-section {
+    padding: 100px 0;
+    background: #fdfdfd;
+}
+
+.contact-glass-card {
+    background: white;
+    border-radius: 30px;
+    padding: 60px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-detail-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.contact-detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(247, 127, 0, 0.1);
+    color: var(--primary-orange);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 25px;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contact-glass-card:hover .contact-icon-box {
+    background: var(--primary-orange);
+    color: white;
+    transform: scale(1.1);
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* 3. Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .contact-glass-card {
+        padding: 40px 30px;
+    }
+    .contact-main-title {
+        font-size: 2.5rem;
+    }
+}

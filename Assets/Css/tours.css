@@ -1,0 +1,559 @@
+/* =========================================================
+   tours.css — Ceylon Journey Tours / Create Your Own Tour
+   ========================================================= */
+
+/* ---------- Global helpers ---------- */
+.text-orange { color: #f77f00 !important; }
+
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   NAVBAR sticky scroll effect — applied via JS
+   ========================================================= */
+#toursNavbar {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background: #fff;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+.tours-page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 60%, #16213e 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern */
+.tours-page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 50%, rgba(247,127,0,0.08) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(79,172,254,0.07) 0%, transparent 45%);
+    pointer-events: none;
+}
+
+.tours-eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ffd580;
+    display: inline-block;
+}
+
+.tours-page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.tours-page-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.78);
+    max-width: 640px;
+    line-height: 1.8;
+}
+
+/* Trust badges */
+.tours-trust-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.88);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+    padding: 6px 16px;
+    backdrop-filter: blur(4px);
+    transition: all 0.25s ease;
+}
+.tours-trust-badge:hover {
+    background: rgba(247,127,0,0.2);
+    border-color: rgba(247,127,0,0.5);
+}
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+.tours-form-section {
+    background: linear-gradient(to bottom, #f0f4ff, #faf8f5);
+}
+
+.tours-form-wrap {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 20px 70px rgba(0,0,0,0.10);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: formFadeIn 0.7s ease forwards;
+}
+
+@keyframes formFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Form header bar */
+.tours-form-header {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: #ffd580;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+}
+.tours-form-header i {
+    font-size: 1.3rem;
+}
+
+/* Form body padding */
+.tours-form-body {
+    padding: 40px;
+}
+
+/* =========================================================
+   FORM FIELDS
+   ========================================================= */
+
+/* Field group */
+.tours-field-group {
+    margin-bottom: 0;
+}
+
+/* Label */
+.tours-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+}
+
+/* Colored dot before label */
+.tours-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #f77f00, #d62828);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tours-required {
+    color: #d62828;
+    font-size: 0.75rem;
+    margin-left: auto;
+    font-weight: 400;
+}
+
+/* Input wrapper (for icon + input) */
+.tours-input-wrap {
+    position: relative;
+}
+
+.tours-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.9rem;
+    z-index: 2;
+    transition: color 0.3s ease;
+    pointer-events: none;
+}
+
+/* For textarea icons — icon sits at top */
+.tours-textarea ~ .tours-input-icon,
+.tours-input-wrap:has(.tours-textarea) .tours-input-icon {
+    top: 18px;
+    transform: none;
+}
+
+/* Input & Textarea */
+.tours-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.87rem;
+    color: #333;
+    background: #fafafa;
+    border: 1.5px solid #e4e8f0;
+    border-radius: 12px;
+    padding: 12px 16px 12px 44px;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: none !important;
+}
+
+.tours-input::placeholder { color: #bbb; }
+
+.tours-input:focus {
+    background: #fff;
+    border-color: #f77f00;
+    box-shadow: 0 0 0 3px rgba(247,127,0,0.12) !important;
+    outline: none;
+    color: #1a1a2e;
+}
+
+.tours-input:focus + .tours-input-icon,
+.tours-input-wrap:focus-within .tours-input-icon {
+    color: #f77f00;
+}
+
+/* Textarea */
+.tours-textarea {
+    resize: vertical;
+    min-height: 100px;
+    padding-top: 14px !important;
+}
+
+/* Select */
+.tours-select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23aaa' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px !important;
+}
+
+/* Validation error message */
+.tours-error {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: #d62828;
+    margin-top: 5px;
+    display: none;
+    padding-left: 4px;
+}
+.tours-error.visible { display: block; }
+
+/* Input error state */
+.tours-input.is-error {
+    border-color: #d62828 !important;
+    box-shadow: 0 0 0 3px rgba(214,40,40,0.1) !important;
+}
+.tours-input.is-success {
+    border-color: #2ecc71 !important;
+    box-shadow: 0 0 0 3px rgba(46,204,113,0.1) !important;
+}
+
+/* =========================================================
+   QUICK-SELECT CHIPS
+   ========================================================= */
+.tours-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tours-chip {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #555;
+    background: #f4f6fa;
+    border: 1.5px solid #e4e8f0;
+    border-radius: 50px;
+    padding: 5px 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+.tours-chip:hover {
+    background: #fff8f0;
+    border-color: #f77f00;
+    color: #f77f00;
+}
+
+.tours-chip.selected {
+    background: linear-gradient(135deg, #f77f00, #d62828);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(247,127,0,0.3);
+}
+
+/* =========================================================
+   TRAVEL STYLE SELECTOR
+   ========================================================= */
+.tours-style-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tours-style-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #f4f6fa;
+    border: 2px solid #e4e8f0;
+    border-radius: 16px;
+    padding: 20px 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: center;
+}
+
+.tours-style-card:hover {
+    background: #fff8f0;
+    border-color: #f77f00;
+    transform: translateY(-3px);
+}
+
+/* Selected state via JS */
+.tours-style-card.selected {
+    background: linear-gradient(135deg, rgba(247,127,0,0.12), rgba(214,40,40,0.06));
+    border-color: #f77f00;
+    box-shadow: 0 6px 20px rgba(247,127,0,0.2);
+}
+
+.ts-icon { font-size: 1.8rem; line-height: 1; }
+.ts-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #333;
+}
+.tours-style-card.selected .ts-label { color: #f77f00; }
+
+/* =========================================================
+   CUSTOM RADIO BUTTONS
+   ========================================================= */
+.tours-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.87rem;
+    color: #444;
+    padding: 12px 20px;
+    border: 1.5px solid #e4e8f0;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    background: #fafafa;
+}
+.tours-radio-label:hover {
+    background: #fff8f0;
+    border-color: #f77f00;
+}
+
+.tours-radio { display: none; }
+
+.tours-radio-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.25s ease;
+}
+.tours-radio-custom::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #f77f00;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+}
+.tours-radio:checked ~ .tours-radio-custom {
+    border-color: #f77f00;
+}
+.tours-radio:checked ~ .tours-radio-custom::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+.tours-radio:checked ~ span:last-child {
+    color: #f77f00;
+    font-weight: 600;
+}
+
+/* =========================================================
+   SUBMIT & RESET BUTTONS
+   ========================================================= */
+.tours-btn-submit {
+    background: linear-gradient(135deg, #f77f00, #d62828);
+    color: #fff !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 14px 36px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(247,127,0,0.38);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.tours-btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(247,127,0,0.52);
+}
+.tours-btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Loading spinner state (applied via JS) */
+.tours-btn-submit.loading {
+    pointer-events: none;
+    opacity: 0.75;
+}
+
+.tours-btn-reset {
+    background: transparent;
+    color: #888 !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.88rem;
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: 1.5px solid #ddd;
+    transition: all 0.3s ease;
+}
+.tours-btn-reset:hover {
+    border-color: #aaa;
+    color: #555 !important;
+    background: #f4f6fa;
+}
+
+/* Form result message */
+#formResult .alert {
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    border: none;
+    padding: 16px 22px;
+}
+
+/* =========================================================
+   WHY CHOOSE US SECTION
+   ========================================================= */
+.tours-why-section {
+    background: #faf8f5;
+}
+
+.tours-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.tours-why-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 32px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.35s ease;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+}
+.tours-why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.10);
+    border-bottom-color: #f77f00;
+}
+
+.tours-why-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(247,127,0,0.12), rgba(214,40,40,0.07));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #f77f00;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+.tours-why-card:hover .tours-why-icon {
+    background: linear-gradient(135deg, #f77f00, #d62828);
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(247,127,0,0.38);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    color: #555 !important;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-social-icon:hover {
+    background: linear-gradient(135deg, #f77f00, #d62828);
+    border-color: transparent;
+    color: #fff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(247,127,0,0.38);
+}
+
+.footer-link {
+    transition: color 0.2s ease;
+}
+.footer-link:hover { color: #f77f00 !important; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+    .tours-form-body      { padding: 28px 20px; }
+    .tours-form-header    { padding: 18px 24px; }
+    .tours-style-grid     { grid-template-columns: repeat(2, 1fr); }
+    .tours-page-title     { font-size: 2rem; }
+    .d-flex.gap-4         { flex-direction: column; gap: 12px !important; }
+}
+
+@media (max-width: 480px) {
+    .tours-style-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}

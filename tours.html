@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Own Tour – Ceylon Journey Sri Lanka</title>
+    <meta name="description"
+        content="Design your perfect Sri Lanka trip with Ceylon Journey. Fill in your travel preferences and we'll craft a personalised itinerary just for you.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Assets/Css/style.css">
+    <link rel="stylesheet" href="Assets/Css/tours.css">
+</head>
+
+<body>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <header id="toursNavbar" class="custom-navbar border-bottom shadow-sm" style="min-height: 80px;">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center h-100">
+            <a href="homepage.html" class="d-flex align-items-center text-decoration-none">
+                <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo"
+                    style="height: 50px; margin-right: 10px;">
+                <h4 class="m-0 fw-bold text-dark">Ceylon Journey</h4>
+            </a>
+            <ul class="nav">
+                <li class="nav-item me-2">
+                    <a href="homepage.html" class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Home</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="abouth.html" class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">About</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="tours.html"
+                        class="nav-link btn-beautiful btn-beautiful-active px-4 py-2 rounded-pill small fw-bold">Tours</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a href="gallery.html" class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ======================== PAGE HEADER ======================== -->
+    <section class="tours-page-header text-center py-5">
+        <div class="container py-3">
+            <span class="tours-eyebrow">Personalised Travel Planning</span>
+            <h1 class="tours-page-title mt-2">Create Your Own Tour</h1>
+            <p class="tours-page-sub mx-auto mt-3">
+                Tell us your travel preferences and let our expert team craft a bespoke
+                Sri Lanka itinerary tailored perfectly to your schedule, budget, and interests.
+                We'll get back to you within <strong>24 hours</strong> with a custom plan. 🌴
+            </p>
+
+            <!-- Trust badges -->
+            <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+                <span class="tours-trust-badge"><i class="fa-solid fa-shield-halved me-2 text-orange"></i>100% Safe
+                    Trips</span>
+                <span class="tours-trust-badge"><i class="fa-solid fa-headset me-2 text-orange"></i>24/7 Support</span>
+                <span class="tours-trust-badge"><i class="fa-solid fa-tag me-2 text-orange"></i>Best Price
+                    Guarantee</span>
+                <span class="tours-trust-badge"><i class="fa-solid fa-star me-2 text-orange"></i>4.9★ Rated
+                    Service</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TOUR FORM ======================== -->
+    <section class="tours-form-section py-5">
+        <div class="container">
+            <div class="tours-form-wrap">
+
+                <!-- Form heading bar -->
+                <div class="tours-form-header">
+                    <i class="fa-solid fa-map-location-dot me-3"></i>
+                    <span>Your Travel Details</span>
+                </div>
+
+                <form id="createTourForm" action="process.php" method="POST" novalidate>
+                    <div class="tours-form-body">
+
+                        <!-- Row 1: Name + WhatsApp -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="tours-field-group">
+                                    <label for="fullName" class="tours-label">
+                                        <span class="tours-dot"></span>Your Name
+                                        <span class="tours-required">*</span>
+                                    </label>
+                                    <div class="tours-input-wrap">
+                                        <i class="fa-solid fa-user tours-input-icon"></i>
+                                        <input type="text" id="fullName" name="fullName"
+                                            class="form-control tours-input" placeholder="e.g. John Smith" required>
+                                    </div>
+                                    <div class="tours-error" id="err-fullName">Please enter your full name.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tours-field-group">
+                                    <label for="whatsapp" class="tours-label">
+                                        <span class="tours-dot"></span>WhatsApp Number
+                                        <span class="tours-required">*</span>
+                                    </label>
+                                    <div class="tours-input-wrap">
+                                        <i class="fa-brands fa-whatsapp tours-input-icon" style="color:#25d366;"></i>
+                                        <input type="tel" id="whatsapp" name="whatsapp" class="form-control tours-input"
+                                            placeholder="e.g. +44 7911 123456" required>
+                                    </div>
+                                    <div class="tours-error" id="err-whatsapp">Please enter a valid WhatsApp number.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Guests + Date -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="tours-field-group">
+                                    <label for="guests" class="tours-label">
+                                        <span class="tours-dot"></span>Number of Guests
+                                        <span class="tours-required">*</span>
+                                    </label>
+                                    <div class="tours-input-wrap">
+                                        <i class="fa-solid fa-users tours-input-icon"></i>
+                                        <input type="number" id="guests" name="guests" class="form-control tours-input"
+                                            placeholder="e.g. 2" min="1" max="50" required>
+                                    </div>
+                                    <div class="tours-error" id="err-guests">Please enter the number of guests.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="tours-field-group">
+                                    <label for="arrivalDate" class="tours-label">
+                                        <span class="tours-dot"></span>Date of Arrival
+                                        <span class="tours-required">*</span>
+                                    </label>
+                                    <div class="tours-input-wrap">
+                                        <i class="fa-solid fa-calendar-days tours-input-icon"></i>
+                                        <input type="date" id="arrivalDate" name="arrivalDate"
+                                            class="form-control tours-input" required>
+                                    </div>
+                                    <div class="tours-error" id="err-arrivalDate">Please select your arrival date.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Number of Days -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="tours-field-group">
+                                    <label for="numDays" class="tours-label">
+                                        <span class="tours-dot"></span>Number of Days
+                                        <span class="tours-required">*</span>
+                                    </label>
+                                    <div class="tours-input-wrap">
+                                        <i class="fa-solid fa-clock tours-input-icon"></i>
+                                        <input type="number" id="numDays" name="numDays"
+                                            class="form-control tours-input" placeholder="e.g. 7" min="1" max="30"
+                                            required>
+                                    </div>
+                                    <div class="tours-error" id="err-numDays">Please enter the number of days.</div>
+                                </div>
+                            </div>
+                            <!-- Budget (added value) -->
+                            <div class="col-md-6">
+                                <div class="tours-field-group">
+                                    <label for="budget" class="tours-label">
+                                        <span class="tours-dot"></span>Approximate Budget (USD)
+                                    </label>
+                                    <div class="tours-input-wrap">
+                                        <i class="fa-solid fa-dollar-sign tours-input-icon"></i>
+                                        <select id="budget" name="budget" class="form-control tours-input tours-select">
+                                            <option value="" disabled selected>Select a budget range</option>
+                                            <option value="economy">Economy — Under $500</option>
+                                            <option value="mid">Mid-Range — $500 – $1,500</option>
+                                            <option value="comfort">Comfort — $1,500 – $3,000</option>
+                                            <option value="luxury">Luxury — $3,000+</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Destinations -->
+                        <div class="tours-field-group mb-4">
+                            <label for="destinations" class="tours-label">
+                                <span class="tours-dot"></span>Destinations You Are Willing to Visit
+                                <span class="tours-required">*</span>
+                            </label>
+                            <!-- Quick-select chips -->
+                            <div class="tours-chips mb-3" id="destChips">
+                                <span class="tours-chip" data-target="destinations" data-value="Sigiriya">🏯
+                                    Sigiriya</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Ella">🌿 Ella</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Kandy">🌸 Kandy</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Galle">⛵ Galle</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Mirissa">🐋
+                                    Mirissa</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Yala">🐆 Yala</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Nuwara Eliya">☁️ Nuwara
+                                    Eliya</span>
+                                <span class="tours-chip" data-target="destinations" data-value="Trincomalee">🏖️
+                                    Trincomalee</span>
+                            </div>
+                            <div class="tours-input-wrap">
+                                <i class="fa-solid fa-location-dot tours-input-icon"></i>
+                                <textarea id="destinations" name="destinations"
+                                    class="form-control tours-input tours-textarea"
+                                    placeholder="e.g. Sigiriya, Kandy, Ella, Galle, Mirissa..." rows="3"
+                                    required></textarea>
+                            </div>
+                            <div class="tours-error" id="err-destinations">Please tell us your preferred destinations.
+                            </div>
+                        </div>
+
+                        <!-- Activities -->
+                        <div class="tours-field-group mb-4">
+                            <label for="activities" class="tours-label">
+                                <span class="tours-dot"></span>Activities You Are Willing to Experience
+                                <span class="tours-required">*</span>
+                            </label>
+                            <!-- Quick-select chips -->
+                            <div class="tours-chips mb-3">
+                                <span class="tours-chip" data-target="activities" data-value="Wildlife Safari">🦁
+                                    Wildlife Safari</span>
+                                <span class="tours-chip" data-target="activities" data-value="Surfing">🏄 Surfing</span>
+                                <span class="tours-chip" data-target="activities" data-value="Hiking">🥾 Hiking</span>
+                                <span class="tours-chip" data-target="activities" data-value="Whale Watching">🐋 Whale
+                                    Watching</span>
+                                <span class="tours-chip" data-target="activities" data-value="Cultural Tours">🏛️
+                                    Cultural Tours</span>
+                                <span class="tours-chip" data-target="activities" data-value="Food Tours">🍛 Food
+                                    Tours</span>
+                                <span class="tours-chip" data-target="activities" data-value="White-water Rafting">🚣
+                                    Rafting</span>
+                                <span class="tours-chip" data-target="activities" data-value="Photography">📸
+                                    Photography</span>
+                            </div>
+                            <div class="tours-input-wrap">
+                                <i class="fa-solid fa-person-hiking tours-input-icon"></i>
+                                <textarea id="activities" name="activities"
+                                    class="form-control tours-input tours-textarea"
+                                    placeholder="e.g. Wildlife safari, surfing, cultural visits, whale watching..."
+                                    rows="3" required></textarea>
+                            </div>
+                            <div class="tours-error" id="err-activities">Please describe the activities you're
+                                interested in.</div>
+                        </div>
+
+                        <!-- Travel Style (added value) -->
+                        <div class="tours-field-group mb-4">
+                            <label class="tours-label mb-3">
+                                <span class="tours-dot"></span>Your Travel Style
+                            </label>
+                            <div class="tours-style-grid">
+                                <label class="tours-style-card" for="style-solo">
+                                    <input type="radio" id="style-solo" name="travelStyle" value="Solo" class="d-none">
+                                    <span class="ts-icon">🧳</span>
+                                    <span class="ts-label">Solo</span>
+                                </label>
+                                <label class="tours-style-card" for="style-couple">
+                                    <input type="radio" id="style-couple" name="travelStyle" value="Couple"
+                                        class="d-none">
+                                    <span class="ts-icon">💑</span>
+                                    <span class="ts-label">Couple</span>
+                                </label>
+                                <label class="tours-style-card" for="style-family">
+                                    <input type="radio" id="style-family" name="travelStyle" value="Family"
+                                        class="d-none">
+                                    <span class="ts-icon">👨‍👩‍👧</span>
+                                    <span class="ts-label">Family</span>
+                                </label>
+                                <label class="tours-style-card" for="style-group">
+                                    <input type="radio" id="style-group" name="travelStyle" value="Group"
+                                        class="d-none">
+                                    <span class="ts-icon">👥</span>
+                                    <span class="ts-label">Group</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Guide -->
+                        <div class="tours-field-group mb-4">
+                            <label class="tours-label mb-3">
+                                <span class="tours-dot"></span>Do You Need a Guide Other Than Driver?
+                            </label>
+                            <div class="d-flex gap-4">
+                                <label class="tours-radio-label" for="guideYes">
+                                    <input type="radio" id="guideYes" name="needGuide" value="yes" class="tours-radio">
+                                    <span class="tours-radio-custom"></span>
+                                    <span>Yes, I need a guide</span>
+                                </label>
+                                <label class="tours-radio-label" for="guideNo">
+                                    <input type="radio" id="guideNo" name="needGuide" value="no" class="tours-radio">
+                                    <span class="tours-radio-custom"></span>
+                                    <span>No, driver is enough</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Any other details -->
+                        <div class="tours-field-group mb-5">
+                            <label for="otherDetails" class="tours-label">
+                                <span class="tours-dot"></span>Any Other Details / Requirements
+                            </label>
+                            <div class="tours-input-wrap">
+                                <i class="fa-solid fa-comment-dots tours-input-icon" style="top:18px;"></i>
+                                <textarea id="otherDetails" name="otherDetails"
+                                    class="form-control tours-input tours-textarea"
+                                    placeholder="e.g. Dietary requirements, accessibility needs, special occasions, preferred accommodation type..."
+                                    rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit row -->
+                        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                            <p class="text-muted small mb-0">
+                                <i class="fa-solid fa-lock me-1 text-orange"></i>
+                                Your details are safe with us and will never be shared.
+                            </p>
+                            <div class="d-flex gap-3">
+                                <button type="reset" class="btn tours-btn-reset" id="resetFormBtn">
+                                    <i class="fa-solid fa-rotate-left me-2"></i>Reset
+                                </button>
+                                <button type="submit" class="btn tours-btn-submit" id="submitTourBtn">
+                                    <i class="fa-solid fa-paper-plane me-2"></i>Submit My Tour Request
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Form message -->
+                        <div id="formResult" class="mt-4"></div>
+
+                    </div><!-- /.tours-form-body -->
+                </form>
+            </div><!-- /.tours-form-wrap -->
+
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ======================== WHY CHOOSE US (bonus section) ======================== -->
+    <section class="tours-why-section py-5">
+        <div class="container py-3">
+            <div class="text-center mb-5 reveal">
+                <span class="tours-eyebrow">Why Book With Us</span>
+                <h2 class="tours-section-title mt-2">What Makes Us Different</h2>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6 reveal" style="transition-delay:0.1s;">
+                    <div class="tours-why-card">
+                        <div class="tours-why-icon"><i class="fa-solid fa-map-marked-alt"></i></div>
+                        <h6 class="fw-bold mt-3 mb-2">Custom Itineraries</h6>
+                        <p class="text-muted small">Every tour is built around your preferences — no one-size-fits-all
+                            packages.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 reveal" style="transition-delay:0.2s;">
+                    <div class="tours-why-card">
+                        <div class="tours-why-icon"><i class="fa-solid fa-car"></i></div>
+                        <h6 class="fw-bold mt-3 mb-2">Comfortable Vehicles</h6>
+                        <p class="text-muted small">Air-conditioned, well-maintained fleet for a smooth and safe ride.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 reveal" style="transition-delay:0.3s;">
+                    <div class="tours-why-card">
+                        <div class="tours-why-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h6 class="fw-bold mt-3 mb-2">Expert Local Guides</h6>
+                        <p class="text-muted small">Knowledgeable, English-speaking guides who bring Sri Lanka alive.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 reveal" style="transition-delay:0.4s;">
+                    <div class="tours-why-card">
+                        <div class="tours-why-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h6 class="fw-bold mt-3 mb-2">24/7 Support</h6>
+                        <p class="text-muted small">We're always available — before, during, and after your trip.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer id="footer-contact" class="bg-footer-section pt-5">
+        <div class="container py-4">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo" style="height: 55px;" class="mb-3">
+                    <h4 class="fw-extra-bold mb-3">Ceylon Journey</h4>
+                    <p class="text-muted small pe-lg-4">Your premier travel partner in Sri Lanka, creating bespoke round tours and unforgettable experiences for over a decade.</p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h6 class="fw-bold mb-4">Tour Categories</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Wildlife Safaris</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Cultural Heritage</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Highland Scenic Tours</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Coastal Getaways</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Adventure Packages</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                    <h6 class="fw-bold mb-4">Reach Out to Us</h6>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-phone"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Hot Line</p>
+                            <p class="fw-bold mb-0">077-1246878</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-envelope"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Email Address</p>
+                            <p class="fw-bold mb-0">info@ceylonjourney.lk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-location-dot"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Head Office</p>
+                            <p class="fw-bold mb-0">123 Main Street, Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-secondary opacity-25">
+            
+            <div class="d-flex flex-wrap justify-content-between align-items-center small text-muted pt-3 pb-2">
+                <p class="mb-0">&copy; 2024 <span class="text-dark fw-bold">Ceylon Journey</span>. All rights reserved. Crafted for excellence.</p>
+                <div class="d-flex gap-4">
+                    <a href="homepage.html" class="footer-link">Home</a>
+                    <a href="abouth.html" class="footer-link">About</a>
+                    <a href="tours.html" class="footer-link">Tours</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Assets/js/script.js"></script>
+    <script src="Assets/js/tours.js"></script>
+</body>
+
+</html>

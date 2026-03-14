@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ceylon Journey – Beauty of Sri Lanka</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Assets/Css/style.css">
+    <link rel="stylesheet" href="Assets/Css/gallery.css">
+</head>
+
+<body>
+
+    <!-- ======================= PRELOADER ======================= -->
+    <div id="preloader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- ======================== NAVBAR ======================== -->
+    <header class="custom-navbar border-bottom shadow-sm" style="min-height: 80px;">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center h-100">
+            <a href="homepage.html" class="d-flex align-items-center text-decoration-none">
+                <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo"
+                    style="height: 50px; margin-right: 10px;">
+                <h4 class="m-0 fw-bold text-dark">Ceylon Journey</h4>
+            </a>
+            <ul class="nav">
+                <li class="nav-item me-2"><a href="homepage.html"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Home</a>
+                </li>
+                <li class="nav-item me-2"><a href="abouth.html"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">About</a>
+                </li>
+                <li class="nav-item me-2"><a href="tours.html"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Tours</a></li>
+                <li class="nav-item me-2"><a href="gallery.html"
+                        class="nav-link btn-beautiful btn-beautiful-active px-4 py-2 rounded-pill small fw-bold">Gallery</a>
+                </li>
+                <li class="nav-item"><a href="contact.html"
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- ======================== GALLERY HEADER ======================== -->
+    <section class="gallery-header py-5 text-center">
+        <div class="container">
+            <span class="gallery-eyebrow mb-2 d-block reveal">Visual Treasures</span>
+            <h1 class="gallery-main-title reveal">Beauty of Sri Lanka</h1>
+            <div class="mx-auto mt-3 reveal" style="width: 50px; height: 3px; background: #f77f00; border-radius: 2px;"></div>
+        </div>
+    </section>
+
+    <!-- ======================== IMAGE GRID (IMAGES ONLY) ======================== -->
+    <section class="gallery-content pb-5">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Row 1 -->
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g1.avif')">
+                    <img src="Assets/Images/gallery/g1.avif" alt="Ella Sri Lanka">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g2.avif')">
+                    <img src="Assets/Images/gallery/g2.avif" alt="Sigiriya">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g3.avif')">
+                    <img src="Assets/Images/gallery/g3.avif" alt="Mirissa">
+                </div>
+
+                <!-- Row 2 -->
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g4.avif')">
+                    <img src="Assets/Images/gallery/g4.avif" alt="Galle Fort">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g5.avif')">
+                    <img src="Assets/Images/gallery/g5.avif" alt="Kandy Train">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g6.avif')">
+                    <img src="Assets/Images/gallery/g6.avif" alt="Lighthouse">
+                </div>
+
+                <!-- Bento Row (Big Left) -->
+                <div class="gallery-item span-6 row-span-2 reveal" onclick="openLightbox('Assets/Images/gallery/g11.avif')">
+                    <img src="Assets/Images/gallery/g11.avif" alt="Sigiriya Lion Paw">
+                </div>
+
+                <div class="gallery-item span-3 reveal" onclick="openLightbox('Assets/Images/gallery/g8.avif')">
+                    <img src="Assets/Images/gallery/g8.avif" alt="Tea Plantations">
+                </div>
+
+                <div class="gallery-item span-3 reveal" onclick="openLightbox('Assets/Images/gallery/g9.avif')">
+                    <img src="Assets/Images/gallery/g9.avif" alt="Elephant Safari">
+                </div>
+
+                <div class="gallery-item span-3 reveal" onclick="openLightbox('Assets/Images/gallery/g10.avif')">
+                    <img src="Assets/Images/gallery/g10.avif" alt="Cultural Dance">
+                </div>
+
+                <div class="gallery-item span-3 reveal" onclick="openLightbox('Assets/Images/gallery/g12.avif')">
+                    <img src="Assets/Images/gallery/g12.avif" alt="Trekking">
+                </div>
+
+                <!-- Large Bottom -->
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g13.avif')">
+                    <img src="Assets/Images/gallery/g13.avif" alt="Ocean View">
+                </div>
+
+                <div class="gallery-item span-8 reveal" onclick="openLightbox('Assets/Images/gallery/g14.avif')">
+                    <img src="Assets/Images/gallery/g14.avif" alt="Sri Lankan Food">
+                </div>
+
+                <!-- New Added Row 1 -->
+                <div class="gallery-item span-8 reveal" onclick="openLightbox('Assets/Images/gallery/g15.avif')">
+                    <img src="Assets/Images/gallery/g15.avif" alt="Sri Lankan Scenery 1">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g16.avif')">
+                    <img src="Assets/Images/gallery/g16.avif" alt="Sri Lankan Wildlife Monkey">
+                </div>
+
+                <!-- New Added Row 2 -->
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g17.avif')">
+                    <img src="Assets/Images/gallery/g17.avif" alt="Sri Lankan Coastline">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('Assets/Images/gallery/g18.avif')">
+                    <img src="Assets/Images/gallery/g18.avif" alt="Sri Lankan Scenery 2">
+                </div>
+
+                <div class="gallery-item span-4 reveal" onclick="openLightbox('AAssets/Images/gallery/g19.avif')">
+                    <img src="Assets/Images/gallery/g19.avif" alt="Sri Lankan Scenery 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== LIGHTBOX ======================== -->
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <span class="close-lightbox" title="Close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    <!-- ======================= FOOTER ======================= -->
+    <footer id="footer-contact" class="bg-footer-section pt-5">
+        <div class="container py-4">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo" style="height: 55px;" class="mb-3">
+                    <h4 class="fw-extra-bold mb-3">Ceylon Journey</h4>
+                    <p class="text-muted small pe-lg-4">Your premier travel partner in Sri Lanka, creating bespoke round tours and unforgettable experiences for over a decade.</p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h6 class="fw-bold mb-4">Tour Categories</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Wildlife Safaris</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Cultural Heritage</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Highland Scenic Tours</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Coastal Getaways</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Adventure Packages</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                    <h6 class="fw-bold mb-4">Reach Out to Us</h6>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-phone"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Hot Line</p>
+                            <p class="fw-bold mb-0">077-1246878</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-envelope"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Email Address</p>
+                            <p class="fw-bold mb-0">info@ceylonjourney.lk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-location-dot"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Head Office</p>
+                            <p class="fw-bold mb-0">123 Main Street, Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-secondary opacity-25">
+            
+            <div class="d-flex flex-wrap justify-content-between align-items-center small text-muted pt-3 pb-2">
+                <p class="mb-0">&copy; 2024 <span class="text-dark fw-bold">Ceylon Journey</span>. All rights reserved. Crafted for excellence.</p>
+                <div class="d-flex gap-4">
+                    <a href="homepage.html" class="footer-link">Home</a>
+                    <a href="abouth.html" class="footer-link">About</a>
+                    <a href="tours.html" class="footer-link">Tours</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/js/gallery.js"></script>
+</body>
+
+</html>

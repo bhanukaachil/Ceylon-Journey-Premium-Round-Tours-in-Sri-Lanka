@@ -2,7 +2,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #faf8f5; /* Global ivory/beige background */
+    background-color: #faf8f5;
+    /* Global ivory/beige background */
 }
 
 /* Navbar & Beautiful Buttons */
@@ -148,4 +149,55 @@ body {
 
 .bg-footer-section {
     background: linear-gradient(to bottom, #D3ECCD, #faf8f5, #D3ECCD);
+}
+
+/* Global Footer Styles */
+.footer-social-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.footer-social-icon:hover {
+    background: #f77f00;
+    color: white;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.footer-link {
+    color: #636e72;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: #f77f00;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f77f00;
+}
+
+.fw-extra-bold {
+    font-weight: 800;
+}
+
+.text-orange {
+    color: #f77f00 !important;
 }

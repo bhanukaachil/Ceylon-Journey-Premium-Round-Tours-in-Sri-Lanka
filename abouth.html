@@ -4,153 +4,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Travel Book Sri Lanka</title>
+    <title>About Us - Ceylon Journey | Your Trusted Tour Specialist in Sri Lanka</title>
+    <meta name="description"
+        content="Learn about Ceylon Journey — your personalized tour specialist in Sri Lanka. Discover our story, our fleet, and why thousands of travelers trust us.">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="Assets/Css/style.css">
+    <link rel="stylesheet" href="Assets/Css/about.css">
 </head>
 
 <body>
 
-    <!-- Header Section -->
+    <!-- ======================== NAVBAR ======================== -->
     <header class="custom-navbar border-bottom shadow-sm" style="min-height: 80px;">
         <div class="container d-flex flex-wrap justify-content-between align-items-center h-100">
             <a href="homepage.html" class="d-flex align-items-center text-decoration-none">
-                <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo" style="height: 50px; margin-right: 10px;">
+                <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo"
+                    style="height: 50px; margin-right: 10px;">
                 <h4 class="m-0 fw-bold text-dark">Ceylon Journey</h4>
             </a>
             <ul class="nav">
                 <li class="nav-item me-2"><a href="homepage.html"
-                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Home</a>
-                </li>
+                        class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Home</a></li>
                 <li class="nav-item me-2"><a href="abouth.html"
-                        class="nav-link btn-beautiful btn-beautiful-active px-4 py-2 rounded-pill small fw-bold">About</a></li>
-                <li class="nav-item me-2"><a href="#"
+                        class="nav-link btn-beautiful btn-beautiful-active px-4 py-2 rounded-pill small fw-bold">About</a>
+                </li>
+                <li class="nav-item me-2"><a href="tours.html"
                         class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Tours</a></li>
-                <li class="nav-item me-2"><a href="#"
+                <li class="nav-item me-2"><a href="gallery.html"
                         class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Gallery</a></li>
-                <li class="nav-item"><a href="#"
+                <li class="nav-item"><a href="contact.html"
                         class="nav-link btn-beautiful px-4 py-2 rounded-pill small fw-bold">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="bg-blue-section py-5 text-center">
-        <div class="container py-5">
-            <h1 class="display-4 fw-bold text-white mb-3">About Us</h1>
-            <p class="lead text-white-50" style="font-family: 'Poppins', sans-serif;">Discover the beauty of Sri Lanka with our expert guidance and personalized tours.</p>
+    <!-- ======================== HERO BANNER ======================== -->
+    <section class="about-hero-banner position-relative overflow-hidden">
+        <div class="about-hero-overlay"></div>
+        <img src="Assets/Images/banner/ella.jpg" alt="Sri Lanka scenic view" class="about-hero-img">
+        <div class="about-hero-content position-absolute text-white text-center">
+            <span class="about-hero-badge mb-3 d-inline-block">Welcome to Ceylon Journey</span>
+            <h1 class="about-hero-title">Your Journey,<br>Our <span class="text-highlight">Passion</span></h1>
+            <p class="about-hero-sub mt-3">Craft unforgettable memories across the pearl of the Indian Ocean</p>
+            <div class="mt-4 d-flex gap-3 justify-content-center">
+                <a href="homepage.html" class="btn about-btn-primary">Explore Tours</a>
+                <a href="#who-we-are" class="btn about-btn-outline">Our Story</a>
+            </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator position-absolute">
+            <div class="scroll-dot"></div>
         </div>
     </section>
 
-    <!-- About Content -->
-    <section class="container py-5 my-5 reveal">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="Assets/Images/elephant.jpg" alt="About Sri Lanka" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; height: 450px;">
-            </div>
-            <div class="col-lg-6 ps-lg-5">
-                <h5 class="text-orange mb-2 fw-bold">WHO WE ARE</h5>
-                <h2 class="fw-bold mb-4">Your Trusted Travel Partner in Sri Lanka</h2>
-                <p class="text-muted mb-4 lh-lg">
-                    We specialize in providing seamless and comfortable travel experiences across the island. From airport pickups to customized tours, we ensure a smooth journey to any destination of your choice.
-                </p>
-                <p class="text-muted mb-4 lh-lg">
-                    With a commitment to professionalism, reliability, and personalized service, our experienced drivers and well-maintained vehicles guarantee a safe and enjoyable trip. Whether you're exploring Sri Lanka's breathtaking landscapes, historic landmarks, or pristine beaches, we tailor our services to meet your travel needs.
-                </p>
-                <a href="homepage.html" class="btn btn-custom mt-2">Explore Tours</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Do Section -->
-    <section class="bg-light py-5 reveal">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">What We Do</h2>
-                <p class="text-muted" style="font-family: 'Poppins', sans-serif;">Comprehensive travel solutions for your perfect vacation</p>
-            </div>
-            <div class="row g-4 mt-2">
-                <div class="col-md-4 reveal" style="transition-delay: 0.1s;">
-                    <div class="card h-100 custom-card text-center p-4">
-                        <div class="card-body">
-                            <i class="fa-solid fa-route fa-3x text-orange mb-4"></i>
-                            <h5 class="card-title fw-bold mb-3">Round Tours</h5>
-                            <p class="card-text text-muted small">Customized round tours in Sri Lanka covering all major attractions and hidden gems.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 reveal" style="transition-delay: 0.2s;">
-                    <div class="card h-100 custom-card text-center p-4">
-                        <div class="card-body">
-                            <i class="fa-solid fa-car fa-3x text-orange mb-4"></i>
-                            <h5 class="card-title fw-bold mb-3">Airport Transfers</h5>
-                            <p class="card-text text-muted small">Reliable and comfortable airport pickup and drop-off services at any time.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 reveal" style="transition-delay: 0.3s;">
-                    <div class="card h-100 custom-card text-center p-4">
-                        <div class="card-body">
-                            <i class="fa-solid fa-hotel fa-3x text-orange mb-4"></i>
-                            <h5 class="card-title fw-bold mb-3">Accommodation</h5>
-                            <p class="card-text text-muted small">Assistance with reserving best hotels, resorts, and vacation rentals tailored to your budget.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-blue-section border-top py-5 text-white">
+    <!-- ======================== STATS BAR ======================== -->
+    <section class="stats-bar py-4">
         <div class="container">
-            <div class="row align-items-md-start mb-5">
-                <div class="col-12 col-md-3 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
-                    <h4 class="fw-bold mb-5 mt-2 text-white">Travel Book</h4>
-                    <div class="d-flex text-white mt-auto mb-2 mb-md-0">
-                        <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"
-                                style="font-size: 1.2rem;"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook-f"
-                                style="font-size: 1.2rem;"></i></a>
-                        <a href="#" class="text-white"><i class="fa-brands fa-twitter"
-                                style="font-size: 1.2rem;"></i></a>
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal">
+                        <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Happy Clients</p>
                     </div>
                 </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal" style="transition-delay:0.1s">
+                        <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal" style="transition-delay:0.2s">
+                        <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Vehicles in Fleet</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal" style="transition-delay:0.3s">
+                        <span class="stat-number" data-target="25">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Destinations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="col-12 col-md-4 text-center text-md-center mb-4 mb-md-0 d-flex flex-column align-items-center mx-auto">
-                    <h6 class="fw-bold mb-3 small text-white">Quick Links</h6>
-                    <ul class="list-unstyled mb-0" style="font-size: 0.85rem;">
-                        <li class="mb-2"><a href="abouth.html" class="text-decoration-none text-white-50">About</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Create Tours</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Gallery</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-white-50">Contact</a></li>
+    <!-- ======================== WHO WE ARE ======================== -->
+    <section id="who-we-are" class="about-section py-5 my-3">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <!-- Text -->
+                <div class="col-lg-6 reveal">
+                    <span class="section-eyebrow">How We Are ?</span>
+                    <h2 class="section-title mt-2 mb-4">Your Personalized Tour<br>Specialist</h2>
+                    <p class="text-muted lh-lg mb-4">
+                        Ceylon Journey was founded with one simple goal — to make every traveler feel like Sri Lanka was
+                        made just for them. We specialize in crafting bespoke itineraries that take you beyond the
+                        tourist trail, deep into the soul of this extraordinary island.
+                    </p>
+                    <p class="text-muted lh-lg mb-4">
+                        From the misty highlands of Ella to the ancient ruins of Sigiriya, from the golden shores of the
+                        south coast to the cultural heart of Kandy, we know every corner — and we can't wait to share it
+                        with you.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mt-3">
+                        <div class="about-feature-pill"><i class="fa-solid fa-check-circle text-orange me-2"></i>Expert
+                            Local Guides</div>
+                        <div class="about-feature-pill"><i class="fa-solid fa-check-circle text-orange me-2"></i>24/7
+                            Support</div>
+                        <div class="about-feature-pill"><i
+                                class="fa-solid fa-check-circle text-orange me-2"></i>Tailored Itineraries</div>
+                        <div class="about-feature-pill"><i class="fa-solid fa-check-circle text-orange me-2"></i>Safe &
+                            Comfortable</div>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div class="col-lg-6 reveal" style="transition-delay:0.2s">
+                    <div class="about-image-wrapper">
+                        <img src="Assets/Images/banner/sigi.jpg" alt="Sigiriya Rock Fortress" class="about-main-img">
+                        <div class="about-img-badge">
+                            <i class="fa-solid fa-star text-warning me-1"></i>
+                            <span>4.9 / 5 Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== COMPANY STORY ======================== -->
+    <section class="company-story-section py-5">
+        <div class="container py-4">
+            <div class="story-card reveal">
+                <div class="story-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                <h3 class="story-title">
+                    <i class="fa-solid fa-circle-dot text-orange me-2"
+                        style="font-size:0.7rem; vertical-align:middle;"></i>
+                    Travel Books Sri Lanka – Your Trusted Companion for Exploring Sri Lanka!
+                </h3>
+                <div class="row mt-4 g-4">
+                    <div class="col-md-6">
+                        <p class="text-muted lh-lg">
+                            At <strong>Travel Books Sri Lanka</strong>, we believe that travel should be more than just
+                            sightseeing — it should be a transformative experience. Since our founding, we have been
+                            committed to providing personalized, high-quality tour services that let you truly connect
+                            with the beauty, culture, and warmth of Sri Lanka.
+                        </p>
+                        <p class="text-muted lh-lg">
+                            Our team of passionate travel experts curate every detail of your journey, from the moment
+                            you land to the moment you depart, ensuring that every day is filled with authentic
+                            experiences and wonderful memories that you will carry for a lifetime.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-muted lh-lg">
+                            We facilitate your access to famous landmarks such as <strong>Sigiriya, Polonnaruwa, the
+                                Galle Fort</strong>, and much more, and we also have the privilege of taking you off the
+                            beaten path to discover the island‐s hidden wonders that most tourists never get to see.
+                        </p>
+                        <p class="text-muted lh-lg">
+                            Our dedication to sustainable tourism means that when you travel with us, you're not only
+                            creating amazing experiences for yourself but also contributing positively to the local
+                            communities and preserving the natural beauty of Sri Lanka for future generations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== WHAT WE OFFER ======================== -->
+    <section class="services-section py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5 reveal">
+                <span class="section-eyebrow">What We Offer</span>
+                <h2 class="section-title mt-2">Services Crafted for You</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal" style="transition-delay:0.1s">
+                    <div class="service-card">
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <h5 class="fw-bold mt-4 mb-2">Round Tours</h5>
+                        <p class="text-muted small">Customized multi-day round tours covering all major attractions and
+                            hidden gems across the island.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.2s">
+                    <div class="service-card">
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-plane-arrival"></i>
+                        </div>
+                        <h5 class="fw-bold mt-4 mb-2">Airport Transfers</h5>
+                        <p class="text-muted small">Reliable, punctual, and comfortable airport pickup and drop-off
+                            services available any hour of the day.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.3s">
+                    <div class="service-card">
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <h5 class="fw-bold mt-4 mb-2">Accommodation</h5>
+                        <p class="text-muted small">Assistance reserving the best hotels, boutique resorts, and
+                            eco-lodges tailored to your budget and taste.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.4s">
+                    <div class="service-card">
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h5 class="fw-bold mt-4 mb-2">Day Excursions</h5>
+                        <p class="text-muted small">Short, action-packed day trips to nearby attractions — perfect for
+                            those with limited time.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.5s">
+                    <div class="service-card">
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h5 class="fw-bold mt-4 mb-2">Photography Tours</h5>
+                        <p class="text-muted small">Exclusive sunrise/sunset photography tours to the most scenic vistas
+                            this beautiful island has to offer.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.6s">
+                    <div class="service-card">
+                        <div class="service-icon-wrap">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h5 class="fw-bold mt-4 mb-2">Food & Culture</h5>
+                        <p class="text-muted small">Immersive food tours and cultural experiences that reveal the
+                            authentic heart of Sri Lankan heritage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FLEET OF VEHICLES ======================== -->
+    <section class="fleet-section py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5 reveal">
+                <i class="fa-solid fa-circle-dot text-orange me-2"
+                    style="font-size:0.7rem; vertical-align: middle;"></i>
+                <span class="section-eyebrow d-inline">Fleet Of Vehicles</span>
+                <h2 class="section-title mt-2">Travel in Comfort &amp; Style</h2>
+                <p class="text-muted mx-auto" style="max-width:560px;">Our well-maintained, air-conditioned fleet
+                    ensures every mile of your journey is smooth, safe and comfortable — whether you're travelling solo
+                    or with a large group.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal" style="transition-delay:0.1s">
+                    <div class="fleet-card">
+                        <div class="fleet-img-wrap">
+                            <img src="Assets/Images/vehicals/Luxury Sedan.jpg" alt="Luxury Car" class="fleet-img">
+                            <div class="fleet-badge">Sedan</div>
+                        </div>
+                        <div class="fleet-body">
+                            <h6 class="fw-bold mb-1">Luxury Sedan</h6>
+                            <p class="text-muted small mb-0">Perfect for couples &amp; solo travelers. Air-conditioned
+                                with premium seating.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.2s">
+                    <div class="fleet-card">
+                        <div class="fleet-img-wrap">
+                            <img src="Assets/Images/vehicals/suv.avif" alt="SUV Vehicle" class="fleet-img">
+                            <div class="fleet-badge">SUV</div>
+                        </div>
+                        <div class="fleet-body">
+                            <h6 class="fw-bold mb-1">Comfortable SUV</h6>
+                            <p class="text-muted small mb-0">Ideal for small families and adventurous terrain. 4WD
+                                available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.3s">
+                    <div class="fleet-card">
+                        <div class="fleet-img-wrap">
+                            <img src="Assets/Images/vehicals/Spacious Mini Van.jpg" alt="Mini Van" class="fleet-img">
+                            <div class="fleet-badge">Van</div>
+                        </div>
+                        <div class="fleet-body">
+                            <h6 class="fw-bold mb-1">Spacious Mini Van</h6>
+                            <p class="text-muted small mb-0">Best for groups of 6-10. Reclining seats, wifi, and luggage
+                                space.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal" style="transition-delay:0.4s">
+                    <div class="fleet-card fleet-card-wide">
+                        <div class="fleet-img-wrap">
+                            <img src="Assets/Images/vehicals/bus.avif" alt="Coastal tour" class="fleet-img">
+                            <div class="fleet-badge">Coach</div>
+                        </div>
+                        <div class="fleet-body">
+                            <h6 class="fw-bold mb-1">Group Coach</h6>
+                            <p class="text-muted small mb-0">Fully air-conditioned coaches for large tour groups — 20 to
+                                50 passengers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 reveal" style="transition-delay:0.5s">
+                    <div class="fleet-card fleet-card-wide">
+                        <div class="fleet-img-wrap">
+                            <img src="Assets/Images/vehicals/jeep.avif" alt="Safari Jeep" class="fleet-img">
+                            <div class="fleet-badge">Jeep</div>
+                        </div>
+                        <div class="fleet-body">
+                            <h6 class="fw-bold mb-1">Safari Jeep</h6>
+                            <p class="text-muted small mb-0">Open-roof jeeps for national park safaris — spot elephants,
+                                leopards and more!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TESTIMONIAL ======================== -->
+    <section class="testimonial-section py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5 reveal">
+                <span class="section-eyebrow">What Travelers Say</span>
+                <h2 class="section-title mt-2">Our Happy Customers</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 reveal" style="transition-delay:0.1s">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="text-muted small lh-lg mb-4">"An absolutely magical experience! The driver was
+                            knowledgeable, friendly, and went above and beyond to ensure we had the best trip possible.
+                            Highly recommend Ceylon Journey!"</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="testimonial-avatar">S</div>
+                            <div>
+                                <strong class="d-block small">Sarah Mitchell</strong>
+                                <span class="text-muted" style="font-size:0.78rem;">United Kingdom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.2s">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="text-muted small lh-lg mb-4">"We had an incredible 10-day tour arranged by Ceylon
+                            Journey. Every detail was planned perfectly — from the boutique hotels to the local
+                            restaurant recommendations. Simply flawless."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="testimonial-avatar"
+                                style="background: linear-gradient(135deg, #f7971e, #ffd200);">M</div>
+                            <div>
+                                <strong class="d-block small">Marco Rossi</strong>
+                                <span class="text-muted" style="font-size:0.78rem;">Italy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal" style="transition-delay:0.3s">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="text-muted small lh-lg mb-4">"Best travel company in Sri Lanka, hands down! The safari
+                            jeep experience in Yala was absolutely breathtaking. We will definitely be booking with
+                            Ceylon Journey again next year."</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="testimonial-avatar"
+                                style="background: linear-gradient(135deg, #11998e, #38ef7d);">A</div>
+                            <div>
+                                <strong class="d-block small">Aiko Tanaka</strong>
+                                <span class="text-muted" style="font-size:0.78rem;">Japan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CTA BANNER ======================== -->
+    <section class="cta-section py-5 reveal">
+        <div class="container py-4 text-center">
+            <h2 class="cta-title mb-3">Ready to Explore Sri Lanka?</h2>
+            <p class="text-muted mb-4">Let us design your perfect itinerary — tailored just for you.</p>
+            <a href="tours.html" class="btn about-btn-primary me-3">Plan My Trip</a>
+            <a href="tel:+94771246878" class="btn about-btn-outline">
+                <i class="fa-solid fa-phone me-2"></i>Call Us Now
+            </a>
+        </div>
+    </section>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer id="footer-contact" class="bg-footer-section pt-5">
+        <div class="container py-4">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <img src="Assets/Images/logo/logo.png" alt="Ceylon Journey Logo" style="height: 55px;" class="mb-3">
+                    <h4 class="fw-extra-bold mb-3">Ceylon Journey</h4>
+                    <p class="text-muted small pe-lg-4">Your premier travel partner in Sri Lanka, creating bespoke round tours and unforgettable experiences for over a decade.</p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <h6 class="fw-bold mb-4">Tour Categories</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Wildlife Safaris</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Cultural Heritage</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Highland Scenic Tours</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Coastal Getaways</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Adventure Packages</a></li>
                     </ul>
                 </div>
-
-                <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <div class="mb-3" style="font-size: 0.85rem;">
-                        <span class="fw-bold text-white me-2"><i class="fa-solid fa-phone me-2 text-orange"></i> Hot Line :</span>
-                        <span class="text-white-50">077-1246878</span>
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                    <h6 class="fw-bold mb-4">Reach Out to Us</h6>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-phone"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Hot Line</p>
+                            <p class="fw-bold mb-0">077-1246878</p>
+                        </div>
                     </div>
-                    <div style="font-size: 0.85rem;">
-                        <span class="fw-bold text-white d-block mb-1"><i class="fa-solid fa-location-dot me-2 text-orange"></i> Address:</span>
-                        <span class="text-white-50 d-block">123 Main Street, City</span>
-                        <span class="text-white-50 d-block">State Province, Country</span>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-envelope"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Email Address</p>
+                            <p class="fw-bold mb-0">info@ceylonjourney.lk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item d-flex align-items-center justify-content-center justify-content-lg-start">
+                        <span class="icon-circle me-3"><i class="fa-solid fa-location-dot"></i></span>
+                        <div class="text-start">
+                            <p class="small text-muted mb-0">Head Office</p>
+                            <p class="fw-bold mb-0">123 Main Street, Colombo, Sri Lanka</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row pt-4 text-center text-md-start border-top border-secondary" style="font-size: 0.8rem;">
-                <div class="col-md-6 mb-2 mb-md-0">
-                    <span class="text-white-50">&copy; 2024 Travel Book Sri Lanka. All rights reserved.</span>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-decoration-none text-white-50 me-4">Privacy Policy</a>
-                    <a href="#" class="text-decoration-none text-white-50">Terms of Service</a>
+            
+            <hr class="border-secondary opacity-25">
+            
+            <div class="d-flex flex-wrap justify-content-between align-items-center small text-muted pt-3 pb-2">
+                <p class="mb-0">&copy; 2024 <span class="text-dark fw-bold">Ceylon Journey</span>. All rights reserved. Crafted for excellence.</p>
+                <div class="d-flex gap-4">
+                    <a href="homepage.html" class="footer-link">Home</a>
+                    <a href="abouth.html" class="footer-link">About</a>
+                    <a href="tours.html" class="footer-link">Tours</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
                 </div>
             </div>
         </div>
@@ -160,6 +475,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="Assets/js/script.js"></script>
+    <script src="Assets/js/about.js"></script>
 </body>
 
 </html>
